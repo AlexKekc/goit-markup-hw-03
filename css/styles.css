@@ -8,6 +8,16 @@
   --footer-bg-color: #2f303a;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
@@ -36,7 +46,7 @@ body {
   color: var(--title-text-color);
 }
 
-/* Site nav */
+/* -------------------------------- Site nav -------------------------------- */
 
 .site-nav-link {
   color: var(--title-text-color);
@@ -57,7 +67,7 @@ body {
   color: var(--accent-color);
 }
 
-/* Connect nav */
+/* -------------------------------- Contacts nav -------------------------------- */
 
 .contacts-nav-link {
   color: var(--primary-text-color);
@@ -74,8 +84,8 @@ body {
   color: var(--accent-color);
 }
 
-/* Hero */
-/* Добавил цвет фона в hero-title для того, 
+/* -------------------------------- Hero -------------------------------- */
+/* Добавил цвет фона в секцию hero для того, 
 чтобы увидеть текст */
 
 .hero {
@@ -93,7 +103,7 @@ body {
   text-transform: uppercase;
 }
 
-/* Section */
+/* -------------------------------- Section -------------------------------- */
 
 .section-title {
   color: var(--title-text-color);
@@ -104,7 +114,7 @@ body {
   text-align: center;
 }
 
-/* Features */
+/* -------------------------------- Features -------------------------------- */
 
 .features-list-title {
   color: var(--title-text-color);
@@ -121,7 +131,7 @@ body {
   line-height: 1.71;
 }
 
-/* Team */
+/* -------------------------------- Team -------------------------------- */
 
 .team-list-title {
   color: var(--title-text-color);
@@ -141,7 +151,7 @@ body {
   background-color: var(--secondary-bg-color);
 }
 
-/* Footer */
+/* -------------------------------- Footer -------------------------------- */
 
 .footer {
   background-color: var(--footer-bg-color);
@@ -170,7 +180,7 @@ body {
   color: var(--accent-color);
 }
 
-/* Buttons */
+/* -------------------------------- Buttons -------------------------------- */
 
 .button {
   color: var(--title-text-color);
@@ -206,7 +216,7 @@ body {
   background-color: var(--accent-color);
 }
 
-/* Portfolio */
+/* -------------------------------- Portfolio -------------------------------- */
 
 .portfolio-filter-button:hover,
 .portfolio-filter-button:focus {
