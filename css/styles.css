@@ -97,8 +97,8 @@ body {
 
 .site-nav-link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   color: var(--title-text-color);
   font-weight: 500;
@@ -158,6 +158,8 @@ body {
 }
 
 .hero-title {
+  width: 696px;
+  margin: 0 auto;
   margin-bottom: 30px;
 
   color: var(--secondary-text-color);
@@ -192,6 +194,18 @@ body {
 
 /* -------------------------------- Features -------------------------------- */
 
+.features-list-container {
+  display: flex;
+  justify-content: center;
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: -30px;
+}
+
+.features-list-item {
+  width: 270px;
+  margin-left: 30px;
+}
+
 .features-list-title {
   margin-bottom: 10px;
 
@@ -210,6 +224,18 @@ body {
 
 /* -------------------------------- Skills -------------------------------- */
 
+.skills-list-container {
+  display: flex;
+  justify-content: center;
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: -30px;
+}
+
+.skills-list-item {
+  width: 370px;
+  margin-left: 30px;
+}
+
 .skills-title {
   margin-bottom: 50px;
 }
@@ -225,11 +251,29 @@ body {
 }
 
 .team-list-container {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: -30px;
 }
 
-.team-list-title {
+.team-list-item {
+  width: 270px;
+  margin-left: 30px;
+}
+
+.team-card-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  background-color: var(--primary-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
+}
+
+.team-card-title {
   margin-bottom: 10px;
 
   color: var(--title-text-color);
@@ -238,7 +282,7 @@ body {
   line-height: 1.19;
 }
 
-.team-list-text {
+.team-card-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -260,10 +304,12 @@ body {
   color: var(--secondary-text-color);
 }
 
-.address-list-link {
+.address-list-item:not(:last-child) {
   display: block;
   margin-bottom: 9px;
+}
 
+.address-list-link {
   color: rgba(255, 255, 255, 0.6);
   font-family: Roboto;
   font-style: normal;
@@ -325,19 +371,49 @@ body {
 
 /* -------------------------------- Portfolio -------------------------------- */
 
+.portfolio-filter-container {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.portfolio-filter-item + .portfolio-filter-item {
+  margin-left: 8px;
+}
+
 .portfolio-filter-button:hover,
 .portfolio-filter-button:focus {
   color: var(--secondary-text-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .work-examples-list-container {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  justify-content: center;
+  flex-basis: calc(100% / 9 - 30px);
+  flex-wrap: wrap;
+  margin-left: -30px;
 }
 
-.work-examples-list-title {
+.work-examples-list-item {
+  width: 370px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.work-examples-card-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border: 1px solid #eeeeee;
+  border-top: transparent;
+  box-sizing: border-box;
+}
+
+.work-examples-card-title {
   color: var(--title-text-color);
 
   font-weight: 700;
@@ -346,7 +422,7 @@ body {
   letter-spacing: 0.06em;
 }
 
-.work-examples-list-text {
+.work-examples-card-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
