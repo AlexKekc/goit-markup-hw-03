@@ -7,6 +7,7 @@
   --secondary-bg-color: #f5f4fa;
   --footer-bg-color: #2f303a;
   --hero-button-hover: #188ce8;
+  --card-set-gap: 30px;
 }
 
 p,
@@ -24,6 +25,7 @@ h6 {
 
 img {
   display: block;
+  min-width: 100%;
 }
 
 body {
@@ -189,14 +191,16 @@ body {
 
 /* -------------------------------- Features -------------------------------- */
 
-.features-list-container {
+.features-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  flex-basis: calc(100% / 4 - 30px);
+  margin-left: calc(-1 * var(--card-set-gap));
 }
 
 .features-list-item {
-  margin-left: 30px;
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
 }
 
 .features-list-title {
@@ -217,14 +221,16 @@ body {
 
 /* -------------------------------- Skills -------------------------------- */
 
-.skills-list-container {
+.skills-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  flex-basis: calc(100% / 3 - 30px);
+  margin-left: calc(-1 * var(--card-set-gap));
 }
 
-.skills-list-item:not(:first-child) {
-  margin-left: 30px;
+.skills-list-item {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
 }
 
 .skills-title {
@@ -241,15 +247,16 @@ body {
   margin-bottom: 50px;
 }
 
-.team-list-container {
+.team-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  flex-basis: calc(100% / 4 - 30px);
+  margin-left: calc(-1 * var(--card-set-gap));
 }
 
-/* Использовал разные методы задания margin */
-.team-list-item + .team-list-item {
-  margin-left: 30px;
+.team-list-item {
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
 }
 
 .team-card-container {
@@ -366,13 +373,14 @@ body {
 
 /* -------------------------------- Portfolio -------------------------------- */
 
-.portfolio-filter-container {
+.portfolio-filter-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.portfolio-filter-item + .portfolio-filter-item {
+.portfolio-filter-list-item + .portfolio-filter-list-item {
   margin-left: 8px;
 }
 
@@ -384,33 +392,29 @@ body {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.work-examples-list-container {
+.work-examples-list {
   display: flex;
-  justify-content: center;
-  flex-basis: calc(100% / 9 - 30px);
   flex-wrap: wrap;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
 }
 
-.work-examples-list-item:not(:nth-child(3n + 1)) {
-  margin-left: 30px;
-  margin-bottom: 30px;
-}
-
-.work-examples-list-item:nth-child(n + 7) {
-  margin-bottom: 0;
+.work-examples-list-item {
+  flex-basis: calc(100% / 9 - var(--card-set-gap));
+  margin-top: var(--card-set-gap);
+  margin-left: var(--card-set-gap);
 }
 
 .work-examples-card-container {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: transparent;
   box-sizing: border-box;
 }
 
 .work-examples-card-title {
+  margin-bottom: 4px;
+
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
